@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - MLBB Kapolresta Sorong Kota Cup</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="../images/logo.png" alt="Logo Turnamen" class="sidebar-logo">
+                <h3>Admin Panel</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="teams.html"><i class="fas fa-users"></i> Tim</a></li>
+                    <li><a href="players.html"><i class="fas fa-user"></i> Pemain</a></li>
+                    <li><a href="schedule.html"><i class="fas fa-calendar-alt"></i> Jadwal</a></li>
+                    <li><a href="matches.html"><i class="fas fa-gamepad"></i> Pertandingan</a></li>
+                    <li><a href="playoff.html"><i class="fas fa-trophy"></i> Playoff</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <a href="../index.html" target="_blank"><i class="fas fa-external-link-alt"></i> Lihat Website</a>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="header-title">
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="header-user">
+                    <span id="admin-name">Admin</span>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Tim</h3>
+                            <p id="team-count">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Pemain</h3>
+                            <p id="player-count">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Pertandingan</h3>
+                            <p id="match-count">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Selesai</h3>
+                            <p id="completed-match-count">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-sections">
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>Pertandingan Hari Ini</h3>
+                        </div>
+                        <div class="section-content">
+                            <div class="today-matches" id="today-matches">
+                                <!-- Today's matches will be loaded from JavaScript -->
+                                <div class="no-data">Tidak ada pertandingan hari ini</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>Klasemen Terkini</h3>
+                        </div>
+                        <div class="section-content">
+                            <table class="dashboard-table">
+                                <thead>
+                                    <tr>
+                                        <th>Peringkat</th>
+                                        <th>Tim</th>
+                                        <th>Main</th>
+                                        <th>Menang</th>
+                                        <th>Kalah</th>
+                                        <th>Poin</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dashboard-standings">
+                                    <!-- Standings will be loaded from JavaScript -->
+                                    <tr>
+                                        <td colspan="6" class="no-data">Belum ada data</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-sections">
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>Aktivitas Terbaru</h3>
+                        </div>
+                        <div class="section-content">
+                            <ul class="activity-list" id="activity-list">
+                                <!-- Activities will be loaded from JavaScript -->
+                                <li class="no-data">Belum ada aktivitas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-section">
+                        <div class="section-header">
+                            <h3>Aksi Cepat</h3>
+                        </div>
+                        <div class="section-content">
+                            <div class="quick-actions">
+                                <a href="teams.html" class="quick-action-btn">
+                                    <i class="fas fa-plus"></i> Tambah Tim
+                                </a>
+                                <a href="players.html" class="quick-action-btn">
+                                    <i class="fas fa-plus"></i> Tambah Pemain
+                                </a>
+                                <a href="schedule.html" class="quick-action-btn">
+                                    <i class="fas fa-plus"></i> Tambah Jadwal
+                                </a>
+                                <a href="matches.html" class="quick-action-btn">
+                                    <i class="fas fa-edit"></i> Update Hasil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/admin/auth-check.js"></script>
+    <script src="../js/admin/dashboard.js"></script>
+</body>
+</html>

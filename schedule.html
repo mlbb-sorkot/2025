@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Pertandingan - MLBB Kapolresta Sorong Kota Cup</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="MLBB Kapolresta Sorong Kota Cup">
+                <h1>MLBB Kapolresta Sorong Kota Cup</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="teams.html">Tim</a></li>
+                    <li><a href="schedule.html" class="active">Jadwal</a></li>
+                    <li><a href="standings.html">Klasemen</a></li>
+                    <li><a href="playoff.html">Playoff</a></li>
+                </ul>
+            </nav>
+            <a href="admin/login.html" class="btn btn-primary">Admin</a>
+        </div>
+    </header>
+
+    <section class="schedule-section">
+        <div class="container">
+            <h2 class="section-title">Jadwal Pertandingan</h2>
+            <p class="section-description">Jadwal lengkap pertandingan MLBB Kapolresta Sorong Kota Cup</p>
+            
+            <div class="schedule-filters">
+                <div class="filter-group">
+                    <label for="date-filter">Filter berdasarkan Tanggal:</label>
+                    <select id="date-filter">
+                        <option value="all">Semua Tanggal</option>
+                        <!-- Tanggal akan diisi oleh JavaScript -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="team-filter">Filter berdasarkan Tim:</label>
+                    <select id="team-filter">
+                        <option value="all">Semua Tim</option>
+                        <!-- Tim akan diisi oleh JavaScript -->
+                    </select>
+                </div>
+            </div>
+            
+            <div id="schedule-timeline" class="schedule-timeline">
+                <div class="loading">Memuat jadwal pertandingan...</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="match-details" class="match-details" style="display: none;">
+        <div class="container">
+            <div class="match-details-header">
+                <h3>Detail Pertandingan</h3>
+                <button id="close-match-details" class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div id="match-info" class="match-info">
+                <!-- Match info will be populated by JavaScript -->
+            </div>
+            
+            <div class="match-lineups">
+                <div id="team1-lineup" class="team-lineup">
+                    <h3>Tim 1</h3>
+                    <ul class="players-list">
+                        <li>Memuat daftar pemain...</li>
+                    </ul>
+                </div>
+                <div id="team2-lineup" class="team-lineup">
+                    <h3>Tim 2</h3>
+                    <ul class="players-list">
+                        <li>Memuat daftar pemain...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="MLBB Kapolresta Sorong Kota Cup">
+                    <h3>MLBB Kapolresta Sorong Kota Cup</h3>
+                    <p>Turnamen Mobile Legends: Bang Bang resmi yang diselenggarakan oleh Kapolresta Sorong Kota.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan Cepat</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="teams.html">Tim</a></li>
+                        <li><a href="schedule.html">Jadwal</a></li>
+                        <li><a href="standings.html">Klasemen</a></li>
+                        <li><a href="playoff.html">Playoff</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MLBB Kapolresta Sorong Kota Cup. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/schedule.js"></script>
+</body>
+</html>

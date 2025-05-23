@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playoff - MLBB Kapolresta Sorong Kota Cup</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Turnamen" id="logo-img">
+                <h1>KAPOLRESTA SORONG KOTA CUP</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="teams.html">Tim</a></li>
+                    <li><a href="schedule.html">Jadwal</a></li>
+                    <li><a href="standings.html">Klasemen</a></li>
+                    <li><a href="playoff.html" class="active">Playoff</a></li>
+                    <li><a href="admin/login.html" class="admin-btn">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h2>Playoff</h2>
+        </div>
+    </section>
+
+    <section class="playoff-section">
+        <div class="container">
+            <div class="playoff-info">
+                <p>Playoff dimulai setelah fase grup selesai. Tim peringkat 1 dan 2 akan maju ke babak playoff.</p>
+            </div>
+            
+            <div class="playoff-bracket">
+                <div class="bracket-round">
+                    <h3 class="round-title">Semi Final</h3>
+                    <div class="bracket-matches">
+                        <div class="bracket-match" id="semifinal-1">
+                            <div class="match-teams">
+                                <div class="team">
+                                    <div class="seed">1</div>
+                                    <div class="team-detail">
+                                        <img src="images/team-placeholder.png" alt="Team 1">
+                                        <span>TBD</span>
+                                    </div>
+                                    <div class="score">-</div>
+                                </div>
+                                <div class="team">
+                                    <div class="seed">4</div>
+                                    <div class="team-detail">
+                                        <img src="images/team-placeholder.png" alt="Team 4">
+                                        <span>TBD</span>
+                                    </div>
+                                    <div class="score">-</div>
+                                </div>
+                            </div>
+                            <div class="match-info">
+                                <span class="match-date">TBD</span>
+                            </div>
+                        </div>
+                        <div class="bracket-match" id="semifinal-2">
+                            <div class="match-teams">
+                                <div class="team">
+                                    <div class="seed">2</div>
+                                    <div class="team-detail">
+                                        <img src="images/team-placeholder.png" alt="Team 2">
+                                        <span>TBD</span>
+                                    </div>
+                                    <div class="score">-</div>
+                                </div>
+                                <div class="team">
+                                    <div class="seed">3</div>
+                                    <div class="team-detail">
+                                        <img src="images/team-placeholder.png" alt="Team 3">
+                                        <span>TBD</span>
+                                    </div>
+                                    <div class="score">-</div>
+                                </div>
+                            </div>
+                            <div class="match-info">
+                                <span class="match-date">TBD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bracket-connector">
+                    <div class="connector"></div>
+                    <div class="connector"></div>
+                </div>
+                
+                <div class="bracket-round">
+                    <h3 class="round-title">Final</h3>
+                    <div class="bracket-matches">
+                        <div class="bracket-match" id="final">
+                            <div class="match-teams">
+                                <div class="team">
+                                    <div class="seed">SF1</div>
+                                    <div class="team-detail">
+                                        <img src="images/team-placeholder.png" alt="Semifinal 1 Winner">
+                                        <span>TBD</span>
+                                    </div>
+                                    <div class="score">-</div>
+                                </div>
+                                <div class="team">
+                                    <div class="seed">SF2</div>
+                                    <div class="team-detail">
+                                        <img src="images/team-placeholder.png" alt="Semifinal 2 Winner">
+                                        <span>TBD</span>
+                                    </div>
+                                    <div class="score">-</div>
+                                </div>
+                            </div>
+                            <div class="match-info">
+                                <span class="match-date">TBD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bracket-connector">
+                    <div class="connector"></div>
+                </div>
+                
+                <div class="bracket-round">
+                    <h3 class="round-title">Juara</h3>
+                    <div class="bracket-champion" id="champion">
+                        <div class="champion-team">
+                            <img src="images/trophy.png" alt="Trophy" class="trophy-img">
+                            <div class="team-detail">
+                                <img src="images/team-placeholder.png" alt="Champion">
+                                <span>TBD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="playoff-matches">
+                <h3>Jadwal Playoff</h3>
+                <div class="playoff-schedule" id="playoff-schedule">
+                    <!-- Playoff schedule will be loaded from JavaScript -->
+                    <div class="schedule-item">
+                        <div class="schedule-date">TBD</div>
+                        <div class="schedule-match">
+                            <div class="match-round">Semi Final 1</div>
+                            <div class="match-teams">
+                                <div class="team">TBD</div>
+                                <div class="vs">VS</div>
+                                <div class="team">TBD</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-date">TBD</div>
+                        <div class="schedule-match">
+                            <div class="match-round">Semi Final 2</div>
+                            <div class="match-teams">
+                                <div class="team">TBD</div>
+                                <div class="vs">VS</div>
+                                <div class="team">TBD</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-date">TBD</div>
+                        <div class="schedule-match">
+                            <div class="match-round">Final</div>
+                            <div class="match-teams">
+                                <div class="team">TBD</div>
+                                <div class="vs">VS</div>
+                                <div class="team">TBD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Logo Turnamen">
+                    <h3>MLBB KAPOLRESTA SORONG KOTA CUP</h3>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="teams.html">Tim</a></li>
+                        <li><a href="schedule.html">Jadwal</a></li>
+                        <li><a href="standings.html">Klasemen</a></li>
+                        <li><a href="playoff.html">Playoff</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MLBB Kapolresta Sorong Kota Cup. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/playoff.js"></script>
+</body>
+</html>

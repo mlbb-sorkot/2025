@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim - MLBB Kapolresta Sorong Kota Cup</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Turnamen" id="logo-img">
+                <h1>KAPOLRESTA SORONG KOTA CUP</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="teams.html" class="active">Tim</a></li>
+                    <li><a href="schedule.html">Jadwal</a></li>
+                    <li><a href="standings.html">Klasemen</a></li>
+                    <li><a href="playoff.html">Playoff</a></li>
+                    <li><a href="admin/login.html" class="admin-btn">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h2>Tim Peserta</h2>
+        </div>
+    </section>
+
+    <section class="teams-section">
+        <div class="container">
+            <div class="teams-grid" id="teams-full-grid">
+                <!-- Teams will be loaded from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="team-details" id="team-details">
+        <div class="container">
+            <div class="team-profile">
+                <div class="team-header">
+                    <img src="" alt="" id="team-logo">
+                    <h2 id="team-name"></h2>
+                </div>
+                <div class="team-info">
+                    <div class="team-stats">
+                        <div class="stat">
+                            <span class="stat-value" id="team-matches">0</span>
+                            <span class="stat-label">Pertandingan</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="team-wins">0</span>
+                            <span class="stat-label">Menang</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="team-losses">0</span>
+                            <span class="stat-label">Kalah</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="team-points">0</span>
+                            <span class="stat-label">Poin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-players">
+                <h3>Daftar Pemain</h3>
+                <div class="players-grid" id="players-grid">
+                    <!-- Players will be loaded from JavaScript -->
+                </div>
+            </div>
+
+            <div class="team-matches">
+                <h3>Pertandingan</h3>
+                <div class="team-matches-list" id="team-matches-list">
+                    <!-- Matches will be loaded from JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Logo Turnamen">
+                    <h3>MLBB KAPOLRESTA SORONG KOTA CUP</h3>
+                </div>
+                <div class="footer-links">
+                    <h4>Tautan</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="teams.html">Tim</a></li>
+                        <li><a href="schedule.html">Jadwal</a></li>
+                        <li><a href="standings.html">Klasemen</a></li>
+                        <li><a href="playoff.html">Playoff</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MLBB Kapolresta Sorong Kota Cup. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/teams.js"></script>
+</body>
+</html>

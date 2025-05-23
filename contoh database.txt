@@ -1,0 +1,142 @@
+Berikut adalah contoh struktur collection database Firebase untuk turnamen yang terdiri dari:
+
+4 tim
+Masing-masing tim memiliki 5 pemain
+Format pertandingan:
+Babak Match Point (Round Robin atau format lain yang sesuai)
+Dilanjutkan dengan Playoff
+Dan Final untuk menentukan Juara 1
+
+Struktur Database Firestore
+Collection: tournaments
+Menyimpan informasi umum tentang turnamen. 
+{
+  "tournamentId": "mlbb_championship_2025",
+  "name": "MLBB National Championship 2025",
+  "startDate": timestamp,
+  "endDate": timestamp,
+  "status": "ongoing", // options: upcoming, ongoing, completed
+  "format": "match_point_playoff_final"
+}
+
+Collection: teams
+Daftar tim dalam turnamen. Setiap tim terdiri dari 5 pemain. 
+Document: team_001, team_002, ..., team_004
+{
+  "teamId": "team_001",
+  "name": "Team Alpha",
+  "tag": "ALP",
+  "players": [
+    {
+      "playerId": "p001",
+      "name": "Rizky",
+      "role": "MID",
+      "inGameName": "RiskyML"
+    },
+    {
+      "playerId": "p002",
+      "name": "Adit",
+      "role": "JUNGLE",
+      "inGameName": "AditPro"
+    },
+    {
+      "playerId": "p003",
+      "name": "Bima",
+      "role": "GOLD",
+      "inGameName": "BimaX"
+    },
+    {
+      "playerId": "p004",
+      "name": "Andi",
+      "role": "ROAM",
+      "inGameName": "AndiTank"
+    },
+    {
+      "playerId": "p005",
+      "name": "Fajar",
+      "role": "EXP",
+      "inGameName": "FajarSkrillex"
+    }
+  ]
+}
+
+Collection: matches
+Semua pertandingan di seluruh babak (Match Point, Playoff, Final) 
+Subcollections:
+matchPointMatches: semua match di babak Match Point
+playoffMatches: babak playoff (misalnya semifinal)
+finalMatch: final antara 2 tim terbaik
+Contoh dokumen di matchPointMatches:
+{
+  "matchId": "mp_match_001",
+  "teamA": "team_001",
+  "teamB": "team_002",
+  "scoreA": 2,
+  "scoreB": 1,
+  "winner": "team_001",
+  "date": timestamp,
+  "stage": "match_point"
+}
+Contoh dokumen di playoffMatches:
+{
+  "matchId": "po_match_001",
+  "teamA": "team_001",
+  "teamB": "team_003",
+  "scoreA": 3,
+  "scoreB": 2,
+  "winner": "team_001",
+  "date": timestamp,
+  "stage": "playoff_semi"
+}
+Dokumen di finalMatch:
+{
+  "matchId": "final_match",
+  "teamA": "team_001",
+  "teamB": "team_004",
+  "scoreA": 3,
+  "scoreB": 1,
+  "winner": "team_001",
+  "date": timestamp,
+  "stage": "final"
+}
+
+Collection: standings (optional)
+Untuk menyimpan urutan tim berdasarkan poin setelah babak Match Point. 
+[
+  {
+    "teamId": "team_001",
+    "points": 9
+  },
+  {
+    "teamId": "team_003",
+    "points": 6
+  },
+  {
+    "teamId": "team_002",
+    "points": 3
+  },
+  {
+    "teamId": "team_004",
+    "points": 0
+  }
+]
+
+Final Result (di collection results)
+{
+  "champion": "team_001",
+  "runnerUp": "team_004",
+  "thirdPlace": null,
+  "finalMatchId": "final_match"
+}
+
+Ringkasan Fitur yang Bisa Dibangun Berdasarkan Struktur Ini:
+Jadwal Pertandingan - Tampilkan semua match dari collection matches
+Hasil Turnamen - Gunakan data dari results dan finalMatch
+Profil Tim & Pemain - Ambil dari collection teams
+Standings - Gunakan data dari standings setelah Match Point
+Live Score Update - Perbarui score di collection matches secara real-time
+
+Tips Implementasi
+Gunakan Cloud Functions untuk menghitung standings otomatis setelah setiap match.
+Gunakan Security Rules untuk memastikan hanya admin yang bisa edit hasil pertandingan.
+Tambahkan timestamp pada setiap match untuk pengurutan waktu.
