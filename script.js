@@ -14,11 +14,11 @@ const topPlayersData = [
 ];
 
 const playerStatsData = [
-    { player: "Revolta", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Arlott" },
-    { player: "Hades", team: "Abyss Gladiators", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Ling" },
-    { player: "Mythos", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Lancelot" },
-    { player: "Zeus", team: "Celestial Legion", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Valentina" },
-    { player: "Athena", team: "Celestial Legion", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Kagura" },
+    { player: "Asrofi", team: "BAJIR SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Arlott" },
+    { player: "PeliGedi", team: "BAJIR SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Ling" },
+    { player: "paitua ternate", team: "BAJIR SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Lancelot" },
+    { player: "jj@44", team: "BAJIR SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Valentina" },
+    { player: "Athena", team: "BAJIR SQUAD", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Kagura" },
     { player: "BlitzX", team: "Sorong Dragons", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Balmond" },
     { player: "Vortex", team: "Abyss Gladiators", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Grock" },
     { player: "Kronos", team: "Titan Wrath", kills: 0, deaths: 0, assists: 0, kda: 0, hero: "Atlas" },
@@ -67,7 +67,7 @@ function loadStandingsData() {
 
 function getTeamImage(teamName) {
     const images = {
-        "Sorong Dragons": "https://i.ibb.co/C5JQXrS/dragon-logo.png",
+        "BAJIR SQUAD": "https://i.ibb.co/C5JQXrS/dragon-logo.png",
         "Abyss Gladiators": "https://i.ibb.co/qBRyH5H/gladiator-logo.png",
         "Celestial Legion": "https://i.ibb.co/d0x3M3Q/celestial-logo.png",
         "Titan Wrath": "https://i.ibb.co/fH2x2pK/titan-logo.png"
