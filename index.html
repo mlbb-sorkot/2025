@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLBB Kapolresta Sorong Kota Cup | Hari Bhayangkara ke-79</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Russo+One&family=Teko:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-[#6A0DAD]/90 backdrop-blur-md fixed w-full z-50 border-b border-[#FFD700]/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="esport.png" alt="MLBB Logo" class="h-10 mr-2">
+                    <span class="text-xl font-bold text-[#FFD700] title-font">MLBB KAPOLRESTA CUP</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#home" class="text-[#F8F8F8] hover:text-[#FFD700] px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#teams" class="text-[#F8F8F8] hover:text-[#FFD700] px-3 py-2 rounded-md text-sm font-medium">Teams</a>
+                        <a href="#schedule" class="text-[#F8F8F8] hover:text-[#FFD700] px-3 py-2 rounded-md text-sm font-medium">Schedule</a>
+                        <a href="#standings" class="text-[#F8F8F8] hover:text-[#FFD700] px-3 py-2 rounded-md text-sm font-medium">Standings</a>
+                        <a href="#playoffs" class="text-[#F8F8F8] hover:text-[#FFD700] px-3 py-2 rounded-md text-sm font-medium">Playoffs</a>
+                        <a href="#stats" class="text-[#F8F8F8] hover:text-[#FFD700] px-3 py-2 rounded-md text-sm font-medium">Stats</a>
+                        <a href="#rules" class="text-[#F8F8F8] hover:text-[#FFD700] px-3 py-2 rounded-md text-sm font-medium">Rules</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-[#F8F8F8] hover:text-[#FFD700] focus:outline-none" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-[#2C2C2C]">
+                <a href="#home" class="text-[#F8F8F8] hover:text-[#FFD700] block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#teams" class="text-[#F8F8F8] hover:text-[#FFD700] block px-3 py-2 rounded-md text-base font-medium">Teams</a>
+                <a href="#schedule" class="text-[#F8F8F8] hover:text-[#FFD700] block px-3 py-2 rounded-md text-base font-medium">Schedule</a>
+                <a href="#standings" class="text-[#F8F8F8] hover:text-[#FFD700] block px-3 py-2 rounded-md text-base font-medium">Standings</a>
+                <a href="#playoffs" class="text-[#F8F8F8] hover:text-[#FFD700] block px-3 py-2 rounded-md text-base font-medium">Playoffs</a>
+                <a href="#stats" class="text-[#F8F8F8] hover:text-[#FFD700] block px-3 py-2 rounded-md text-base font-medium">Stats</a>
+                <a href="#rules" class="text-[#F8F8F8] hover:text-[#FFD700] block px-3 py-2 rounded-md text-base font-medium">Rules</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-[url('Cover.jpg')] bg-cover bg-center opacity-30"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#6A0DAD]/30 via-[#2C2C2C]/70 to-[#2C2C2C]"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10 relative">
+            <div class="text-center">
+                <img src="logo1.png" alt="Hari Bhayangkara Ke-79" class="mx-auto h-24 md:h-32 mb-6">
+                
+                <h1 class="text-4xl md:text-6xl font-bold text-[#FFD700] mb-4 title-font glow">
+                    KAPOLRESTA <br>
+                    <span class="text-white">SORONG KOTA CUP</span>
+                </h1>
+                
+                <h2 class="text-xl md:text-2xl text-[#F8F8F8] mb-8 subtitle-font">Turnamen Mobile Legends Internal dalam <br> Rangka Hari Bhayangkara ke-79 Tahun 2025</h2>
+                
+                <div class="digital-font bg-[#2C2C2C]/80 border border-[#FFD700]/30 rounded-lg inline-block px-6 py-2 mb-8">
+                    <div class="text-2xl md:text-3xl text-[#FFD700]">HADIAH RP. 1.000.000</div>
+                    <div class="text-sm text-[#F8F8F8]">TOTAL PRIZE POOL</div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-12">
+                    <button class="btn-gold px-8 py-3 rounded-lg font-bold ripple-effect">
+                        <i class="fas fa-calendar-alt mr-2"></i> 12-21 Juni 2025
+                    </button>
+                    <button class="border-2 border-[#FFD700] text-[#FFD700] px-8 py-3 rounded-lg font-bold ripple-effect">
+                        <i class="fas fa-trophy mr-2"></i> OFFLINE TOURNAMENT
+                    </button>
+                </div>
+                
+                <div class="relative w-full max-w-2xl mx-auto mt-12 float-animation">
+                    <img src="esport.png" alt="E-Sport Polresta Sorong Kota" class="w-64 mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="bg-[#1E1E1E] py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-center text-[#F8F8F8] opacity-70 text-sm mb-6 subtitle-font">DISPONSORI OLEH</h3>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <img src="https://i.ibb.co/3RNtZVT/polri-logo.png" alt="Polri" class="h-12 md:h-16 opacity-80">
+                <img src="https://i.ibb.co/Msdk7cT/kapolresta-logo.png" alt="Kapolresta" class="h-12 md:h-16 opacity-80">
+                <img src="https://i.ibb.co/XXg3LZk/sorong-kota-logo.png" alt="Sorong Kota" class="h-12 md:h-16 opacity-80">
+            </div>
+        </div>
+    </section>
+
+    <!-- Teams Section -->
+    <section id="teams" class="py-16 bg-[#2C2C2C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#FFD700] mb-4 title-font">TIM PESERTA</h2>
+                <div class="w-20 h-1 bg-[#FFD700] mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team 1 -->
+                <div class="team-card card-glass rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                    <div class="relative">
+                        <img src="tem.jpg" alt="Team 1 Background" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#6A0DAD]/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-2xl font-bold text-[#FFD700] title-font">BAJIR SQUAD</h3>
+                            <p class="text-[#F8F8F8] text-sm subtitle-font">Kapten: Asrofi</p>
+                        </div>
+                        <!-- <div class="absolute top-4 right-4 bg-[#6A0DAD] text-[#FFD700] px-3 py-1 rounded-full text-xs font-bold">TEAM A</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-[#FFD700] font-bold mb-3 subtitle-font">PLAYERS:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-crown"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Asrofi</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">PeliGedi</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">jj@44</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">paitua ternate</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Sunflowers</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Team 2 -->
+                <div class="team-card card-glass rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                    <div class="relative">
+                        <img src="tem.jpg" alt="Team 2 Background" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#6A0DAD]/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-2xl font-bold text-[#FFD700] title-font">ABYSS GLADIATORS</h3>
+                            <p class="text-[#F8F8F8] text-sm subtitle-font">Captain: HADES</p>
+                        </div>
+                        <!-- <div class="absolute top-4 right-4 bg-[#6A0DAD] text-[#FFD700] px-3 py-1 rounded-full text-xs font-bold">TEAM B</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-[#FFD700] font-bold mb-3 subtitle-font">PLAYERS:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-crown"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Hades</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Vortex</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Ragnar</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Odin</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Hel</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Team 3 -->
+                <div class="team-card card-glass rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                    <div class="relative">
+                        <img src="tem.jpg" alt="Team 3 Background" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#6A0DAD]/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-2xl font-bold text-[#FFD700] title-font">CELESTIAL LEGION</h3>
+                            <p class="text-[#F8F8F8] text-sm subtitle-font">Captain: ZEUS</p>
+                        </div>
+                        <!-- <div class="absolute top-4 right-4 bg-[#6A0DAD] text-[#FFD700] px-3 py-1 rounded-full text-xs font-bold">TEAM C</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-[#FFD700] font-bold mb-3 subtitle-font">PLAYERS:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-crown"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Zeus</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Athena</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Apollo</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Artemis</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Hermes</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Team 4 -->
+                <div class="team-card card-glass rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                    <div class="relative">
+                        <img src="tem.jpg" alt="Team 4 Background" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#6A0DAD]/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-2xl font-bold text-[#FFD700] title-font">TITAN WRATH</h3>
+                            <p class="text-[#F8F8F8] text-sm subtitle-font">Captain: KRONOS</p>
+                        </div>
+                        <!-- <div class="absolute top-4 right-4 bg-[#6A0DAD] text-[#FFD700] px-3 py-1 rounded-full text-xs font-bold">TEAM D</div> -->
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-[#FFD700] font-bold mb-3 subtitle-font">PLAYERS:</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-crown"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Kronos</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Gaia</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Atlas</span>
+                            </li>
+                            <li class="flex items-center border-b border-[#6A0DAD]/30 pb-2">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Prometheus</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-[#FFD700] mr-2"><i class="fas fa-user-alt"></i></span>
+                                <span class="text-[#F8F8F8] subtitle-font">Hyperion</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-16 bg-[#252525]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#FFD700] mb-4 title-font">TOURNAMENT SCHEDULE</h2>
+                <div class="w-20 h-1 bg-[#FFD700] mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Day 1 -->
+                <div class="card-glass rounded-xl overflow-hidden">
+                    <div class="bg-[#6A0DAD] p-4 text-center">
+                        <h3 class="text-xl font-bold text-[#FFD700] title-font">DAY 1</h3>
+                        <p class="text-[#F8F8F8] text-sm subtitle-font">12 Juni 2025 | Match Point</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#FFD700] font-medium subtitle-font">12:00 WIT</span>
+                                <span class="bg-[#6A0DAD] text-[#F8F8F8] px-2 py-1 rounded-full text-xs font-bold">MATCH 1</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#F8F8F8] subtitle-font">Sorong Dragons vs Abyss Gladiators</span>
+                                <span class="text-[#FFD700] digital-font text-sm">18:00 WIT</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#FFD700] font-medium subtitle-font">13:00 WIT</span>
+                                <span class="bg-[#6A0DAD] text-[#F8F8F8] px-2 py-1 rounded-full text-xs font-bold">MATCH 2</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[#F8F8F8] subtitle-font">Celestial Legion vs Titan Wrath</span>
+                                <span class="text-[#FFD700] digital-font text-sm">18:00 WIT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day 2 -->
+                <div class="card-glass rounded-xl overflow-hidden">
+                    <div class="bg-[#6A0DAD] p-4 text-center">
+                        <h3 class="text-xl font-bold text-[#FFD700] title-font">DAY 2</h3>
+                        <p class="text-[#F8F8F8] text-sm subtitle-font">13 Juni 2025 | Match Point</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#FFD700] font-medium subtitle-font">14:00 WIT</span>
+                                <span class="bg-[#6A0DAD] text-[#F8F8F8] px-2 py-1 rounded-full text-xs font-bold">MATCH 1</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#F8F8F8] subtitle-font">Sorong Dragons vs Celestial Legion</span>
+                                <span class="text-[#FFD700] digital-font text-sm">18:00 WIT</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#FFD700] font-medium subtitle-font">15:00 WIT</span>
+                                <span class="bg-[#6A0DAD] text-[#F8F8F8] px-2 py-1 rounded-full text-xs font-bold">MATCH 2</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[#F8F8F8] subtitle-font">Abyss Gladiators vs Titan Wrath</span>
+                                <span class="text-[#FFD700] digital-font text-sm">18:00 WIT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Day 3 -->
+                <div class="card-glass rounded-xl overflow-hidden">
+                    <div class="bg-[#6A0DAD] p-4 text-center">
+                        <h3 class="text-xl font-bold text-[#FFD700] title-font">DAY 3</h3>
+                        <p class="text-[#F8F8F8] text-sm subtitle-font">14 Juni 2025 | Match Point</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#FFD700] font-medium subtitle-font">16:00 WIT</span>
+                                <span class="bg-[#6A0DAD] text-[#F8F8F8] px-2 py-1 rounded-full text-xs font-bold">MATCH 1</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#F8F8F8] subtitle-font">Sorong Dragons vs Titan Wrath</span>
+                                <span class="text-[#FFD700] digital-font text-sm">18:00 WIT</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#FFD700] font-medium subtitle-font">17:00 WIT</span>
+                                <span class="bg-[#6A0DAD] text-[#F8F8F8] px-2 py-1 rounded-full text-xs font-bold">MATCH 2</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[#F8F8F8] subtitle-font">Abyss Gladiators vs Celestial Legion</span>
+                                <span class="text-[#FFD700] digital-font text-sm">18:00 WIT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Playoffs -->
+                <div class="card-glass rounded-xl overflow-hidden">
+                    <div class="bg-[#6A0DAD] p-4 text-center">
+                        <h3 class="text-xl font-bold text-[#FFD700] title-font">PLAYOFFS</h3>
+                        <p class="text-[#F8F8F8] text-sm subtitle-font">19 Juni 2025</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#FFD700] font-medium subtitle-font">18:00 WIT</span>
+                                <span class="bg-[#6A0DAD] text-[#F8F8F8] px-2 py-1 rounded-full text-xs font-bold">SEMIFINAL 1</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#F8F8F8] subtitle-font">Rank 1 vs Rank 4</span>
+                                <span class="text-[#FFD700] digital-font text-sm">19:30 WIT</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#FFD700] font-medium subtitle-font">19:00 WIT</span>
+                                <span class="bg-[#6A0DAD] text-[#F8F8F8] px-2 py-1 rounded-full text-xs font-bold">SEMIFINAL 2</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[#F8F8F8] subtitle-font">Rank 2 vs Rank 3</span>
+                                <span class="text-[#FFD700] digital-font text-sm">20:30 WIT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Final -->
+                <div class="card-glass rounded-xl overflow-hidden">
+                    <div class="bg-[#FFD700] p-4 text-center">
+                        <h3 class="text-xl font-bold text-[#2C2C2C] title-font">GRAND FINAL</h3>
+                        <p class="text-[#6A0DAD] text-sm subtitle-font">21 Juni 2025</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[#FFD700] font-medium subtitle-font">20:00 WIT</span>
+                                <span class="bg-[#FFD700] text-[#2C2C2C] px-2 py-1 rounded-full text-xs font-bold">GRAND FINAL</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-[#F8F8F8] subtitle-font">Winner SF1 vs Winner SF2</span>
+                                <span class="text-[#FFD700] digital-font text-sm">21:30 WIT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standings Section -->
+    <section id="standings" class="py-16 bg-[#2C2C2C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#FFD700] mb-4 title-font">GROUP STANDINGS</h2>
+                <div class="w-20 h-1 bg-[#FFD700] mx-auto"></div>
+            </div>
+            
+            <div class="bg-[#3A3A3A]/50 rounded-lg overflow-hidden border border-[#6A0DAD]/50">
+                <div class="grid grid-cols-12 bg-[#6A0DAD] p-4 font-bold text-[#FFD700]">
+                    <div class="col-span-1 text-center subtitle-font">#</div>
+                    <div class="col-span-5 subtitle-font">TEAM</div>
+                    <div class="col-span-1 text-center subtitle-font">MP</div>
+                    <div class="col-span-1 text-center subtitle-font">W</div>
+                    <div class="col-span-1 text-center subtitle-font">L</div>
+                    <div class="col-span-1 text-center subtitle-font">PT</div>
+                    <div class="col-span-2 text-center subtitle-font">POINTS</div>
+                </div>
+                
+                <div class="standings-container">
+                    <!-- Standings data will be loaded via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playoffs Bracket -->
+    <section id="playoffs" class="py-16 bg-[#252525]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#FFD700] mb-4 title-font">PLAYOFFS BRACKET</h2>
+                <div class="w-20 h-1 bg-[#FFD700] mx-auto"></div>
+            </div>
+            
+            <div class="tournament-bracket">
+                <div class="flex flex-col md:flex-row justify-center items-start md:items-center gap-8">
+                    <!-- Semifinals -->
+                    <div class="bracket-round bg-[#2C2C2C]/70 p-6 rounded-xl border border-[#6A0DAD]/50">
+                        <h3 class="text-xl text-[#FFD700] font-bold mb-4 text-center title-font">SEMIFINALS</h3>
+                        
+                        <div class="bracket-match">
+                            <div class="text-center text-xs text-[#FFD700] mb-2 digital-font">19 Juni 2025 - 18:00 WIT</div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-medium text-[#F8F8F8] subtitle-font">Rank 1</span>
+                                <span class="text-[#FFD700] digital-font text-xs">VS</span>
+                                <span class="font-medium text-[#F8F8F8] subtitle-font">Rank 4</span>
+                            </div>
+                            <div class="text-center text-xs text-[#F8F8F8] mt-1 subtitle-font">Best of 3</div>
+                        </div>
+                        
+                        <div class="bracket-match">
+                            <div class="text-center text-xs text-[#FFD700] mb-2 digital-font">19 Juni 2025 - 19:00 WIT</div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-medium text-[#F8F8F8] subtitle-font">Rank 2</span>
+                                <span class="text-[#FFD700] digital-font text-xs">VS</span>
+                                <span class="font-medium text-[#F8F8F8] subtitle-font">Rank 3</span>
+                            </div>
+                            <div class="text-center text-xs text-[#F8F8F8] mt-1 subtitle-font">Best of 3</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Final -->
+                    <div class="bracket-round bg-[#2C2C2C]/70 p-6 rounded-xl border border-[#FFD700]/50">
+                        <h3 class="text-xl text-[#FFD700] font-bold mb-4 text-center title-font">GRAND FINAL</h3>
+                        
+                        <div class="bracket-match">
+                            <div class="text-center text-xs text-[#FFD700] mb-2 digital-font">21 Juni 2025 - 20:00 WIT</div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-medium text-[#F8F8F8] subtitle-font">Winner SF1</span>
+                                <span class="text-[#FFD700] digital-font text-xs">VS</span>
+                                <span class="font-medium text-[#F8F8F8] subtitle-font">Winner SF2</span>
+                            </div>
+                            <div class="text-center text-xs text-[#F8F8F8] mt-1 subtitle-font">Best of 5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Player Stats -->
+    <section id="stats" class="py-16 bg-[#2C2C2C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#FFD700] mb-4 title-font">PLAYER STATISTICS</h2>
+                <div class="w-20 h-1 bg-[#FFD700] mx-auto"></div>
+            </div>
+            
+            <div class="mb-8">
+                <h3 class="text-xl text-[#FFD700] mb-4 title-font">TOP KDA PLAYERS</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Top players will be loaded via JavaScript -->
+                </div>
+            </div>
+            
+            <div class="bg-[#3A3A3A]/50 rounded-lg overflow-hidden border border-[#6A0DAD]/50 mt-12">
+                <div class="grid grid-cols-12 bg-[#6A0DAD] p-4 font-bold text-[#FFD700]">
+                    <div class="col-span-3 subtitle-font">PLAYER</div>
+                    <div class="col-span-2 text-center subtitle-font">TEAM</div>
+                    <div class="col-span-1 text-center subtitle-font">KILL</div>
+                    <div class="col-span-1 text-center subtitle-font">DEATH</div>
+                    <div class="col-span-1 text-center subtitle-font">ASSIST</div>
+                    <div class="col-span-1 text-center subtitle-font">KDA</div>
+                    <div class="col-span-3 text-center subtitle-font">BEST HERO</div>
+                </div>
+                
+                <div class="player-stats-container">
+                    <!-- Player stats will be loaded via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="py-16 bg-[#252525]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#FFD700] mb-4 title-font">TOURNAMENT RULES</h2>
+                <div class="w-20 h-1 bg-[#FFD700] mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- General Rules -->
+                <div class="card-glass p-6 rounded-xl">
+                    <h3 class="text-xl text-[#FFD700] mb-4 title-font">GENERAL RULES</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-[#FFD700]">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-[#F8F8F8] text-sm subtitle-font">Game Offline - Turnamen dilaksanakan secara offline di lokasi yang ditentukan panitia.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-[#FFD700]">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-[#F8F8F8] text-sm subtitle-font">Peserta wajib membawa Device Mobile Phone (Android/iOS) sendiri.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-[#FFD700]">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-[#F8F8F8] text-sm subtitle-font">Akun peserta harus sudah terdaftar di Panitia.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-[#FFD700]">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-[#F8F8F8] text-sm subtitle-font">Waktu pertandingan ditentukan berdasarkan kesepakatan bersama tim dan panitia.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-[#FFD700]">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <p class="ml-3 text-[#F8F8F8] text-sm subtitle-font">Kapten wajib Screenshot Room dan Hasil Pertandingan.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Game Rules -->
+                <div class="card-glass p-6 rounded-xl">
+                    <h3 class="text-xl text-[#FFD700] mb-4 title-font">GAME RULES</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-[#FFD700]">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <p class="ml-3 text-[#F8F8F8] text-sm subtitle-font">Custom Draft Pick - Game mode tournament draft.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-[#FFD700]">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <p class="ml-3 text-[#F8F8F8] text-sm subtitle-font">1x Game Pause diperbolehkan per match.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-[#FFD700]">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <p class="ml-3 text-[#F8F8F8] text-sm subtitle-font">Ganti Akun/Nickname (OFF) - Role Roster (LOCK).</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-[#FFD700]">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <p class="ml-3 text-[#F8F8F8] text-sm subtitle-font">Chat All dan Radio All (OFF), Hero/Skin Trial, Emot (ON).</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 text-[#FFD700]">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <p class="ml-3 text-[#F8F8F8] text-sm subtitle-font">Game Remake Jika Situasi Mendesak (Sesuai Draft Pick Sebelumnya).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1E1E1E] py-8 border-t border-[#6A0DAD]/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="esport.png" alt="MLBB Logo" class="h-10 mr-2">
+                    <span class="text-lg font-bold text-[#FFD700] title-font">MLBB KAPOLRESTA CUP</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-[#F8F8F8] hover:text-[#FFD700]">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-[#F8F8F8] hover:text-[#FFD700]">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-[#F8F8F8] hover:text-[#FFD700]">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-[#F8F8F8] hover:text-[#FFD700]">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-[#6A0DAD]/30 text-center text-[#F8F8F8]/70 text-sm subtitle-font">
+                <p>© 2025 MLBB Kapolresta Sorong Kota Cup. All rights reserved.</p>
+                <p class="mt-2">Turnamen dalam rangka memperingati Hari Bhayangkara ke-79 Tahun 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
