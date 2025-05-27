@@ -67,7 +67,7 @@ function loadStandingsData() {
 
 function getTeamImage(teamName) {
     const images = {
-        "BAJIR SQUAD": "https://i.ibb.co/C5JQXrS/dragon-logo.png",
+        "BAJIR SQUAD": "https://github.com/mlbb-sorkot/2025/blob/main/esport.png",
         "Abyss Gladiators": "https://i.ibb.co/qBRyH5H/gladiator-logo.png",
         "Celestial Legion": "https://i.ibb.co/d0x3M3Q/celestial-logo.png",
         "Titan Wrath": "https://i.ibb.co/fH2x2pK/titan-logo.png"
