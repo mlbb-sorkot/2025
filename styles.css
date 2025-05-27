@@ -1,1 +1,161 @@
+:root {
+    --gold: #FFD700;
+    --purple: #6A0DAD;
+    --dark-gray: #2C2C2C;
+    --ivory: #F8F8F8;
+}
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-gray);
+    color: var(--ivory);
+    overflow-x: hidden;
+}
+
+.title-font {
+    font-family: 'Russo One', 'Bebas Neue', sans-serif;
+}
+
+.subtitle-font {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.digital-font {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.table-font {
+    font-family: 'Teko', sans-serif;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(106, 13, 173, 0.8) 0%, rgba(42, 42, 42, 0.9) 100%);
+}
+
+.glow {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+.card-glass {
+    background: rgba(44, 44, 44, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.btn-gold {
+    background: linear-gradient(45deg, #FFD700, #FFAA00);
+    color: #2C2C2C;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(106, 13, 173, 0.4);
+}
+
+.tournament-bracket {
+    display: flex;
+    flex-direction: column;
+}
+
+.bracket-round {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.bracket-match {
+    background: rgba(44, 44, 44, 0.8);
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    .tournament-bracket {
+        flex-direction: column;
+    }
+    
+    .bracket-round {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .bracket-match {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+.ripple-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-effect:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s;
+}
+
+.ripple-effect:active:after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+}
+
+/* Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+.delay-3 {
+    animation-delay: 0.9s;
+}
+
+.stats-bar {
+    height: 30px;
+    background: linear-gradient(90deg, var(--purple), var(--gold));
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: var(--dark-gray);
+    font-weight: bold;
+    transition: width 1s ease-in-out;
+}
